@@ -21,7 +21,7 @@ class HealthIcon extends FlxSprite
 		animation.add('bf-christmas', [0, 1, 29], 0, false, isPlayer);
 		animation.add('bf-pixel', [21, 21], 0, false, isPlayer);
 		animation.add('spooky', [2, 3, 2], 0, false, isPlayer);
-		animation.add('seagush', [4, 5, 4], 0, false, isPlayer);
+		animation.add('pico', [4, 5, 4], 0, false, isPlayer);
 		animation.add('mom', [6, 7, 6], 0, false, isPlayer);
 		animation.add('mom-car', [6, 7, 6], 0, false, isPlayer);
 		animation.add('tankman', [8, 9, 8], 0, false, isPlayer);
@@ -35,6 +35,7 @@ class HealthIcon extends FlxSprite
 		animation.add('parents-christmas', [17], 0, false, isPlayer);
 		animation.add('monster', [19, 20, 19], 0, false, isPlayer);
 		animation.add('monster-christmas', [19, 20, 19], 0, false, isPlayer);
+		animation.add('seagush', [4, 5, 4], 0, false, isPlayer);
 		animation.play(char);
 		scrollFactor.set();
 	}

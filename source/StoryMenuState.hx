@@ -22,7 +22,7 @@ class StoryMenuState extends MusicBeatState
 
 	var weekData:Array<Dynamic> = [
 		// Songs that are in the weeks
-		['Glitch']
+		['Sus']
 	];
 	var curDifficulty:Int = 1; // 0 = easy, 1 = normal, 2 = hard
 
@@ -36,7 +36,7 @@ class StoryMenuState extends MusicBeatState
 
 	var weekNames:Array<String> = [
 		// week names
-		"Your dead here!"
+		"Sussy week!!!1!!!!111111!11111!"
 	];
 
 	var txtWeekTitle:FlxText;

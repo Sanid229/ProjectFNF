@@ -239,8 +239,8 @@ class PlayState extends MusicBeatState
 
 		switch (SONG.song.toLowerCase())
 		{
-			case 'Test':
-				dialogue = ["Hey you're pretty cute.", 'Use the arrow keys to keep up \nwith me singing.'];
+			case 'Sus':
+				dialogue = ["Fuck you."'];
 			case 'bopeebo':
 				dialogue = [
 					'HEY!',

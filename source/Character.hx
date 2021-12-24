@@ -238,27 +238,35 @@ class Character extends FlxSprite
 				addOffset("singLEFT", -30);
 				addOffset("singDOWN", -40, -94);
 				playAnim('idle');
-			case 'seagush':
-		                tex = Paths.getSparrowAtlas('Seagush');
+		        case 'pico':
+				tex = Paths.getSparrowAtlas('characters/Pico_FNF_assetss');
 				frames = tex;
-				animation.addByPrefix('idle', 'idle', 24, false);
-				animation.addByPrefix('singUP', 'up', 24, false);
-				animation.addByPrefix('singDOWN', 'down', 24, false);
-				animation.addByPrefix('singLEFT', 'left', 24, false);
-				animation.addByPrefix('singRIGHT', 'right', 24, false);
+				animation.addByPrefix('idle', "Pico Idle Dance", 24, false);
+				animation.addByPrefix('singUP', 'pico Up note0', 24, false);
+				animation.addByPrefix('singDOWN', 'Pico Down Note0', 24, false);
+				if (isPlayer)
+				{
+					animation.addByPrefix('singLEFT', 'Pico NOTE LEFT0', 24, false);
+					animation.addByPrefix('singRIGHT', 'Pico Note Right0', 24, false);
+					animation.addByPrefix('singRIGHTmiss', 'Pico Note Right Miss', 24, false);
+					animation.addByPrefix('singLEFTmiss', 'Pico NOTE LEFT miss', 24, false);
+				}
+				else
+				{
+					// Need to be flipped! REDO THIS LATER!
+					animation.addByPrefix('singLEFT', 'Pico Note Right0', 24, false);
+					animation.addByPrefix('singRIGHT', 'Pico NOTE LEFT0', 24, false);
+					animation.addByPrefix('singRIGHTmiss', 'Pico NOTE LEFT miss', 24, false);
+					animation.addByPrefix('singLEFTmiss', 'Pico Note Right Miss', 24, false);
+				}
 
-				addOffset('idle');
-				addOffset("singUP", -29, 27);
-				addOffset("singRIGHT", -68, -7);
-				addOffset("singLEFT", 65, 9);
-				addOffset("singDOWN", 200, -70);
-				addOffset("singUPmiss", -19, 67);
-				addOffset("singRIGHTmiss", -60, 41);
-				addOffset("singLEFTmiss", 62, 64);
-				addOffset("singDOWNmiss", 210, -28);
+				animation.addByPrefix('singUPmiss', 'pico Up note miss', 24);
+				animation.addByPrefix('singDOWNmiss', 'Pico Down Note MISS', 24);
 
 				playAnim('idle');
-			case 'bf':
+
+				flipX = true;
+                                case 'bf':
 				var tex = Paths.getSparrowAtlas('BOYFRIEND');
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
@@ -491,14 +499,17 @@ class Character extends FlxSprite
 				addOffset("singDOWN-alt", -30, -27);
 
 				playAnim('idle');
+		         case 'seagush':
+				tex = Paths.getSparrowAtlas('characters/Seagush');
+				frames = tex;
+				animation.addByPrefix('idle', "idle", 24, false);
+				animation.addByPrefix('singUP', 'up', 24, false);
+				animation.addByPrefix('singDOWN', 'down', 24, false);
+				animation.addByPrefix('singLEFT', 'left', 24, false);
+				animation.addByPrefix('singRIGHT', 'right', 24, false);
+
+				playAnim('idle');
 		}
-
-		dance();
-
-		if (isPlayer)
-		{
-			flipX = !flipX;
-
 			// Doesn't flip for BF, since his are already in the right place???
 			if (!curCharacter.startsWith('bf'))
 			{

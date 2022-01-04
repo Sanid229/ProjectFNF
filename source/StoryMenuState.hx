@@ -30,12 +30,13 @@ class StoryMenuState extends MusicBeatState
 
 	var weekCharacters:Array<Dynamic> = [
 		// Characters that are displayed in the story mode menu
-		['', 'bf', 'gf']
-		['', 'bf', 'gf'],
+		['pico', 'bf', 'gf']
+		['pico', 'bf', 'gf'],
 	];
 
 	var weekNames:Array<String> = [
 		// week names
+		"yes"
 		"Sussy week!!!1!!!!111111!11111!"
 	];
 
